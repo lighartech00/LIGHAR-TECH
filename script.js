@@ -42,15 +42,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const elementsToAnimate = document.querySelectorAll('.product, .about-container, .skills-grid, .contact-form');
     elementsToAnimate.forEach(el => observer.observe(el));
 
+    // Typing effect for creations page
+    const codeBox = document.querySelector('.running-code-box');
+    if (codeBox) {
+        const codeLines = codeBox.querySelectorAll('span');
+        let lineIndex = 0;
+
+        function typeLine() {
+            if (lineIndex < codeLines.length) {
+                const line = codeLines[lineIndex];
+                const text = line.textContent;
+                line.textContent = '';
+                line.style.display = 'block';
+                let charIndex = 0;
+
+                function typeChar() {
+                    if (charIndex < text.length) {
+                        line.textContent += text.charAt(charIndex);
+                        charIndex++;
+                        setTimeout(typeChar, 50); // Adjust typing speed here
+                    } else {
+                        lineIndex++;
+                        setTimeout(typeLine, 200); // Adjust delay between lines here
+                    }
+                }
+                typeChar();
+            }
+        }
+
+        codeLines.forEach(line => line.style.display = 'none');
+        typeLine();
+    }
+
     // Placeholder products (for index and creations pages)
     if (document.getElementById('product-grid')) {
         const products = [
             { name: 'Placeholder Creation 1', image: 'images/placeholder.png', description: 'A custom-built solution designed with a personal touch to solve a unique challenge.' },
             { name: 'Placeholder Creation 2', image: 'images/placeholder.png', description: 'This project showcases my dedication to clean code and intuitive user experiences.' },
-            { name: 'Placeholder Creation 3', image: 'images/placeholder.png', description: 'From initial idea to final deployment, this creation was a one-person passion project.' },
-            { name: 'Placeholder Creation 4', image: 'images/placeholder.png', description: 'Leveraging modern tech to build something unique, entirely from my own workshop.' },
-            { name: 'Placeholder Creation 5', image: 'images/placeholder.png', description: 'Another example of bespoke software development with a focus on quality.' },
-            { name: 'Placeholder Creation 6', image: 'images/placeholder.png', description: 'Built to scale and perform, this project was a rewarding challenge.' }
+            // { name: 'Placeholder Creation 3', image: 'images/placeholder.png', description: 'From initial idea to final deployment, this creation was a one-person passion project.' },
+            // { name: 'Placeholder Creation 4', image: 'images/placeholder.png', description: 'Leveraging modern tech to build something unique, entirely from my own workshop.' },
+            // { name: 'Placeholder Creation 5', image: 'images/placeholder.png', description: 'Another example of bespoke software development with a focus on quality.' },
+            // { name: 'Placeholder Creation 6', image: 'images/placeholder.png', description: 'Built to scale and perform, this project was a rewarding challenge.' }
         ];
 
         const productGrid = document.getElementById('product-grid');

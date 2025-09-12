@@ -47,10 +47,4 @@
     display: block;
     white-space: nowrap;
     overflow: hidden;
-    animation: codeScroll 10s linear infinite;
-}
-
-@keyframes codeScroll {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-100%); }
 }
