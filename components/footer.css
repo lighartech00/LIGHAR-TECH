@@ -1,0 +1,93 @@
+/* Footer */
+footer {
+    background-color: #222222;
+    border-top: 1px solid #444444;
+    color: #cccccc;
+    padding: 60px 0 30px;
+    margin-top: 40px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+footer .container {
+    padding: 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: left;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #0056b3;
+}
+
+.footer-section p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.footer-section.contact-info p i {
+    margin-right: 10px;
+    color: #007bff;
+}
+
+.footer-section.social .social-links a {
+    display: inline-block;
+    margin-right: 15px;
+    color: #cccccc;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section.social .social-links a:hover {
+    color: #007bff;
+}
+
+.footer-bottom {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    margin-top: 30px;
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+}
+
+/* Dark Theme Footer */
+body.dark-theme footer {
+    background-color: #222222; /* Match new light theme footer background */
+    border-top-color: #444444; /* Match new light theme footer border */
+    color: #cccccc; /* Ensure text color is consistent */
+}
+
+body.dark-theme .footer-bottom {
+    background-color: #1a1a1a;
+    color: #aaaaaa;
+}
