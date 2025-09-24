@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Form Test</title>
+</head>
+<body>
+    <h1>Test Submission to Google Form</h1>
+    <p>Fill this out and click submit. This test bypasses your website's JavaScript to check the direct connection to Google Forms.</p>
+
+    <!-- This form submits directly to your Google Form's endpoint. -->
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSfhU3dmwbPer0St7M4B4X0hmrCBfQUINvY3dZd4AiTLRJjYXA/formResponse" method="POST" target="_blank">
+        <div style="margin-bottom: 10px;">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="entry.1333043421" required>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="entry.168428209" required>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="entry.1849237610" required></textarea>
+        </div>
+        <button type="submit">Submit Test</button>
+    </form>
+
+</body>
+</html>

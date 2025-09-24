@@ -123,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             submitButton.disabled = true;
             submitButton.textContent = 'Sending...';
 
+            // IMPORTANT: Paste your new Google Apps Script Web App URL here
             const formActionURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfhU3dmwbPer0St7M4B4X0hmrCBfQUINvY3dZd4AiTLRJjYXA/formResponse';
             const formData = new FormData(googleForm);
 
