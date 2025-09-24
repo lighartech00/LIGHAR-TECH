@@ -112,6 +112,41 @@ document.addEventListener('DOMContentLoaded', () => {
             observer.observe(productDiv);
         });
     }
+
+    // Handle Google Form submission for contact page
+    const googleForm = document.getElementById('google-form');
+    if (googleForm) {
+        googleForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const submitButton = googleForm.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Sending...';
+
+            const formActionURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfhU3dmwbPer0St7M4B4X0hmrCBfQUINvY3dZd4AiTLRJjYXA/formResponse';
+            const formData = new FormData(googleForm);
+
+            fetch(formActionURL, {
+                method: 'POST',
+                body: formData,
+                mode: 'no-cors', // This is required to avoid CORS errors when submitting to Google Forms
+            })
+            .then(() => {
+                // The button doesn't need to be re-enabled since the form is hidden on success.
+                const successMessage = document.getElementById('form-success-message');
+                googleForm.style.display = 'none'; // Hide the form
+                if (successMessage) {
+                    successMessage.style.display = 'block'; // Show the success message
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                alert('Sorry, there was an error sending your message. Please try again.');
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            });
+        });
+    }
 });
 
 function initializeHeaderJS() {
