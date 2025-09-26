@@ -1,6 +1,7 @@
 body {
     font-family: sans-serif;
     background-color: #f4f4f4;
+    padding-top: 100px;
 }
 
 .container {
@@ -15,7 +16,6 @@ h1 {
 }
 
 main {
-    padding-top: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
@@ -46,6 +46,8 @@ canvas {
 #messages-table {
     width: 100%;
     border-collapse: collapse;
+    display: block;
+    overflow-x: auto;
 }
 
 #messages-table th, #messages-table td {
@@ -79,4 +81,26 @@ body.dark-theme #messages-table th, body.dark-theme #messages-table td {
 
 body.dark-theme #messages-table th {
     background-color: #222;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    #messages-section {
+        grid-column: span 1;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
 }
