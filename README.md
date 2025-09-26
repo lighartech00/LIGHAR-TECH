@@ -1,12 +1,12 @@
-# LIGHTSR TECH Website
+# LIGHAR TECH Website
 
-This is the personal website for LIGHTSR TECH, showcasing creations, services, and more.
+This is the personal website for LIGHAR TECH, showcasing creations, services, and more.
 
 ## Overview
 
 The website is built using HTML, CSS, and JavaScript. It features a modern design with a focus on user experience. The site includes several pages:
 
-* **Home:** Introduction to LIGHTSR TECH.
+* **Home:** Introduction to LIGHAR TECH.
 * **Creations:** A gallery of projects.
 <!-- *   **Services:** Details the services offered. -->
 * **Contact:** A form to get in touch.
