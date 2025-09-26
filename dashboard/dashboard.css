@@ -1,3 +1,82 @@
 body {
     font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+main {
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+section {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#messages-section {
+    grid-column: span 2;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+canvas {
+    max-width: 100%;
+}
+
+#messages-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#messages-table th, #messages-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#messages-table th {
+    background-color: #f9f9f9;
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme section {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme h1, body.dark-theme h2 {
+    color: #fff;
+}
+
+body.dark-theme #messages-table th, body.dark-theme #messages-table td {
+    border-bottom-color: #333;
+}
+
+body.dark-theme #messages-table th {
+    background-color: #222;
 }
