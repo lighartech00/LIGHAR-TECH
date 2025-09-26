@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="/components/header.css">
     <link rel="stylesheet" href="/components/footer.css">
     <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <header class="navbar">
@@ -23,16 +23,7 @@
     </div>
     <div class="nav-right">
         <ul class="navbar-nav" id="navbar-nav">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/creations.html">Creations</a></li>
             <li><a href="/dashboard/dashboard.html">Dashboard</a></li>
-            <!-- <li><a href="/services.html">Services</a></li> -->
-            
-            
-            <!-- <li><a href="/blog.html">Blog</a></li> -->
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-            <li class="desktop-only"><a href="/contact.html" class="btn btn-primary">Get in Touch</a></li>
             <li>
                 <button id="theme-toggle" class="theme-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sun-icon"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -72,6 +63,20 @@
                 </div>
             </div>
             <canvas id="downloads-chart"></canvas>
+        </section>
+        <section id="settings-section">
+            <h2>Settings</h2>
+            <div class="setting-row">
+                <label for="notifications">Enable Notifications</label>
+                <label class="switch">
+                    <input type="checkbox" id="notifications" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class="setting-row">
+                <label for="export-data">Export Data</label>
+                <button id="export-data" class="btn btn-primary">Export</button>
+            </div>
         </section>
     </main>
 
