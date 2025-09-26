@@ -28,10 +28,6 @@ section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#messages-section {
-    grid-column: span 2;
-}
-
 h2 {
     margin-top: 0;
     margin-bottom: 1.5rem;
@@ -39,25 +35,36 @@ h2 {
     color: #333;
 }
 
+.summary-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.card p {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
 canvas {
     max-width: 100%;
-}
-
-#messages-table {
-    width: 100%;
-    border-collapse: collapse;
-    display: block;
-    overflow-x: auto;
-}
-
-#messages-table th, #messages-table td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-#messages-table th {
-    background-color: #f9f9f9;
 }
 
 /* Dark theme styles */
@@ -75,21 +82,21 @@ body.dark-theme h1, body.dark-theme h2 {
     color: #fff;
 }
 
-body.dark-theme #messages-table th, body.dark-theme #messages-table td {
-    border-bottom-color: #333;
+body.dark-theme .card {
+    background-color: #222;
 }
 
-body.dark-theme #messages-table th {
-    background-color: #222;
+body.dark-theme .card h3 {
+    color: #aaa;
+}
+
+body.dark-theme .card p {
+    color: #fff;
 }
 
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
-    }
-
-    #messages-section {
-        grid-column: span 1;
     }
 
     .container {
@@ -102,5 +109,9 @@ body.dark-theme #messages-table th {
 
     h2 {
         font-size: 1.25rem;
+    }
+
+    .summary-cards {
+        grid-template-columns: 1fr;
     }
 }
