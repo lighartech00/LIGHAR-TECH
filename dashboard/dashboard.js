@@ -112,16 +112,3 @@ if (downloadsChartCanvas) {
         }
     });
 }
-
-// Logout functionality
-const logoutButton = document.getElementById('logout-button');
-if (logoutButton) {
-    logoutButton.addEventListener('click', () => {
-        // Clear any session/local storage items related to authentication
-        localStorage.removeItem('theme'); // Example: clear theme preference on logout
-        sessionStorage.removeItem('isAdmin'); // Clear the admin flag if it was used
-
-        // Redirect to the home page or login page
-        window.location.href = '/'; // Redirect to the root of the website
-    });
-}
