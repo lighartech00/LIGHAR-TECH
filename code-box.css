@@ -9,7 +9,7 @@
     height: 200px; /* Fixed height for the code box */
     overflow: hidden;
     position: relative;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P', arial;
     font-size: 0.9rem;
     line-height: 1.4;
     color: #20c997; /* Green for code */
